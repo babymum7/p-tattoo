@@ -1,0 +1,136 @@
+/*=============================================
+            service-page start
+=============================================
+*/
+
+.service-page-wrap h3 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.service-page-wrap p {
+    margin-bottom: 20px;
+}
+
+
+/*---------wedo-area start---------*/
+
+.wedo-wrap {
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0px;
+    background: transparent;
+}
+
+.wedo-icon {
+    background: #191b1e;
+    height: 110px;
+    padding: 30px;
+    width: 110px;
+    margin: 0px auto;
+    border-radius: 50%;
+    position: relative;
+}
+
+.wedo-icon span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wedo-icon span:before {
+    font-size: 50px;
+    color: #fb9902;
+}
+
+.wedo-info {
+    padding: 17px 0px;
+}
+
+.wedo-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.wedo-info p {
+    margin: 0;
+}
+
+.wedo-img {
+    padding: 0px;
+}
+
+
+/*---------wedo-area end---------*/
+
+
+/*-------------------quote-area start-------------------*/
+
+.quote-wrap p {
+    text-align: center;
+    font-size: 16px;
+    padding: 0px 10px;
+    margin: 0;
+}
+
+.quote-wrap p span {
+    color: #fb9902;
+}
+
+.quote-area {
+    position: relative;
+    background-image: url("../images/bg/4.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: $black;
+        opacity: 0.6;
+    }
+}
+
+
+/*-------------------quote-area end-------------------*/
+
+
+/*--------work-area start--------*/
+
+.work-area {
+    padding: 100px 0px 70px;
+}
+
+.work-wrap {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.work-wrap i {
+    height: 100px;
+    width: 100px;
+    background: #131619;
+    border-radius: 50%;
+    line-height: 100px;
+    font-size: 30px;
+    color: #fb9902;
+    margin-bottom: 25px;
+}
+
+.work-wrap h3 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+
+
+/*--------work-area end--------*/

@@ -1,0 +1,138 @@
+// /*-------- cart-area start ----------*/
+table {
+    width: 100%;
+}
+
+.shoping-cart-wrap {
+    background: $bg-2;
+    text-align: center;
+}
+
+.shoping-cart-wrap thead {
+    background: #fb9902;
+    color: #fff;
+}
+
+.shoping-cart-wrap thead tr th {
+    border-right: 1px solid #fff;
+    padding: 15px 5px;
+    &:last-child {
+        border-right: none;
+    }
+}
+
+.shoping-cart-wrap tbody tr td {
+    padding: 15px 5px;
+    border-bottom: 1px solid #e1e1e1;
+    font-size: 16px;
+    color: #fb9902;
+    font-weight: 600;
+}
+
+.shoping-cart-quantity input {
+    width: 50px;
+    height: 30px;
+    background: #f2f2f2;
+    border-radius: 5px;
+    border: 1px solid #f2f2f2;
+    display: inline-block;
+    margin: 0;
+    padding-left: 10px;
+    position: relative;
+    color: $black;
+}
+
+.shoping-cart-name a,
+.shoping-cart-remove a {
+    color: #fb9902;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.shoping-cart-name a:hover,
+.shoping-cart-remove a:hover {
+    color: #fff;
+}
+
+.shoping-cart-name.actived {
+    display: none;
+}
+
+.shoping-cart-btn {
+    text-align: right;
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+
+.shoping-cart-btn a {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    background: #fb9902;
+    color: #fff;
+    font-weight: 600;
+    margin-left: 5px;
+    border-radius: 5px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.shoping-cart-btn a:hover {
+    background: #fff;
+    color: #222;
+}
+
+.cart-form-wrap {
+    padding: 30px 20px;
+    background: $bg-2;
+}
+
+.cart-form-wrap input {
+    background: transparent;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 10px;
+    border: 1px solid #cdd5d9;
+    padding-left: 20px;
+}
+
+.cart-form-wrap button {
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    border: transparent;
+    background: #fb9902;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.cart-form-wrap button:hover {
+    background: #fff;
+    color: #222;
+}
+
+.cart-form-wrap ul li {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    color: #fb9902;
+    font-size: 16px;
+    overflow: hidden;
+    border-bottom: 1px solid #cdd5d9;
+}
+
+.cart-form-wrap ul li span {
+    float: right
+}
+
+.cart-form-wrap h3.widget-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+}
+
+// /* -------- cart-area end ----------*/

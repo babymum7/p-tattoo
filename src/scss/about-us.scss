@@ -1,0 +1,115 @@
+/*--------------------tetsmonial-area start--------------------*/
+
+.test-active {
+    padding-bottom: 70px;
+}
+
+.test-items {
+    text-align: center;
+}
+
+.test-img {
+    height: 180px;
+    width: 180px;
+    overflow: hidden;
+    margin: 0px auto 30px;
+    border-radius: 50%;
+}
+
+.test-items h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.test-items p {
+    font-size: 16px;
+    padding: 0px 10px;
+}
+
+.test-active .owl-dots {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+.test-active .owl-dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0px 3px;
+    background: #fff;
+}
+
+.test-active .owl-dot.active {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    background: #fb9902;
+}
+
+
+/*--------------------tetsmonial-area end--------------------*/
+
+
+/*-------------------------contact-area start-------------------------*/
+
+.contact-form textarea {
+    height: 270px;
+}
+
+.contact-wrap ul li {
+    position: relative;
+    padding: 30px 20px 30px 100px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: #131619;
+    margin-bottom: 25px;
+    border-radius: 5px;
+}
+
+.contact-wrap ul li:last-child {
+    margin-bottom: 0px;
+}
+
+.contact-wrap p {
+    margin: 0;
+}
+
+.contact-wrap li {
+    color: #fff;
+}
+
+.contact-wrap ul li i {
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: 50%;
+    left: 30px;
+    font-size: 35px;
+    color: #fb9902;
+}
+
+.contact-wrap ul li p {
+    font-size: 14px;
+    margin-top: 8px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.contact-wrap ul li p span {
+    display: block;
+}
+
+
+/*-------------------------contact-area end-------------------------*/
+
+#googleMap {
+    margin-top: 100px;
+    height: 550px;
+    width: 100%;
+}

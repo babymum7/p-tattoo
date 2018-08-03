@@ -1,0 +1,163 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+//
+// Color system
+//
+$white: rgba(255, 255, 255, 0.9) !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge( ( "100": $gray-100, "200": $gray-200, "300": $gray-300, "400": $gray-400, "500": $gray-500, "600": $gray-600, "700": $gray-700, "800": $gray-800, "900": $gray-900), $grays);
+//
+$blue: #007bff !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+$colors: () !default;
+$colors: map-merge( ( "blue": $blue, "indigo": $indigo, "purple": $purple, "pink": $pink, "red": $red, "orange": $orange, "yellow": $yellow, "green": $green, "teal": $teal, "cyan": $cyan, "white": $white, "gray": $gray-600, "gray-dark": $gray-800), $colors);
+//
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge( ( 0: 0, 0.25: ($spacer * .25), 0.5: ($spacer * .5), 1: $spacer, 1.5: ($spacer * 1.5), 2: ($spacer * 2), 2.5: ($spacer * 2.5), 3: ($spacer * 3)), $spacers);
+//
+// Body
+//
+// Settings for the `<body>` element.
+$body-bg: $white !default;
+$body-color: $gray-900 !default;
+// Links
+//
+// Style anchor elements.
+$link-color: $blue !default;
+$link-decoration: none !default;
+$link-hover-color: darken($link-color, 15%) !default;
+$link-hover-decoration: underline !default;
+// Paragraphs
+//
+// Style p element.
+$paragraph-margin-bottom: 1rem !default;
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: -apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol" !default;
+$font-family-monospace: SFMono-Regular,
+Menlo,
+Monaco,
+Consolas,
+"Liberation Mono",
+"Courier New",
+monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+// stylelint-enable value-keyword-case
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg: ($font-size-base * 1.25) !default;
+$font-size-sm: ($font-size-base * .875) !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.5 !default;
+$headings-margin-bottom: ($spacer / 2) !default;
+$dt-font-weight: $font-weight-bold !default;
+$text-muted: $gray-600 !default;
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+$table-cell-padding: .75rem !default;
+$table-caption-color: $text-muted !default;
+// Forms
+$label-margin-bottom: .5rem !default;
+//
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px) !default;
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: ( sm: 540px, md: 720px, lg: 960px, xl: 1140px) !default;
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+$grid-columns: 12 !default;
+$grid-gutter-width: 32px !default;
+//
+//variablesStyles
+//
+//color
+$bg-1: #0d0f11;
+$bg-2: #131619;
+$bg-we-do-icon: #191B1E;
+$orange: rgba(255, 165, 0, 0.8);
+$gold: rgba(255, 215, 0, 0.8);
+//font-size
+$fz-normal:16px;
+$fz-smaller: 14px;
+$fz-larger-1:18px;
+$fz-larger-2: 20px;
+$fz-extra-large: 55px;
+$fz-btn: 12px;
+$fz-title-header: 30px;
+$fz-title-header-lg: 45px;
+$fz-title-header-xl: 62px;
+$fz-h5: 17px;
+$fz-h3: 23px;
+$fz-title-address:24px;
+$fz-title-section: 25px;
+$fz-title-section-md:34px;
+$fz-we-do-icon: 50px;
+$fz-form:11px;
+//font-weight
+$fw-bold: 600;
+$fw-normal: 400;
+$fw-bold-2:700;
+//line-height
+$lh-title:1.2;
+$lh-para:1.7;
+//font-family
+$ff-montserrat: 'Montserrat',
+sans-serif;
+$ff-open: 'Open Sans',
+sans-serif;
+//transition
+$transition-slide: 1s;
+$transition-hover:0.3s;
+$transition-dot: 0.5s;
+$transition-content: 0.7s;
