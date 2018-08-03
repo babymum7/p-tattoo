@@ -229,7 +229,7 @@ document.addEventListener("DOMContentLoaded", function() {
             gridImg.style.position = "relative";
             itemImgs.forEach(e => e.style.position = "absolute");
             filter(gridImg, itemImgs);
-        }, 5);
+        }, 1000);
 
         filterImage.forEach((e) => {
             e.addEventListener('click', () => {
