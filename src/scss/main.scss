@@ -590,7 +590,7 @@ section {
 
 .address__title {
     h4 {
-        font-size: 21px;
+        font-size: 18px;
         font-weight: $fw-bold-2;
         padding-bottom: space(0.5);
         margin-bottom: space(1.5);
@@ -628,7 +628,7 @@ section {
         float: right;
     }
     ul {
-        padding-right: 20%;
+        padding-right: 0;
     }
 }
 
@@ -647,6 +647,12 @@ section {
             }
             cursor: pointer;
         }
+    }
+}
+
+.address__short {
+    a {
+        font-size: 13px;
     }
 }
 
