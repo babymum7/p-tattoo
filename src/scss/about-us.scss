@@ -57,8 +57,19 @@
 
 /*-------------------------contact-area start-------------------------*/
 
+.contact-form {
+    input,
+    textarea {
+        font-size: 16px;
+    }
+}
+
 .contact-form textarea {
-    height: 270px;
+    height: 250px;
+    color: #fff;
+    &:focus {
+        outline: none;
+    }
 }
 
 .contact-wrap ul li {

@@ -31,10 +31,12 @@
     border-radius: 5px;
     color: #6a6a6a;
     font-weight: 400;
-    height: 50px;
+    height: 45px;
     margin-bottom: 25px;
     padding-left: 15px;
     width: 100%;
+    font-size: 15px;
+    color: $white;
 }
 
 .signup-form input[type="checkbox"] {

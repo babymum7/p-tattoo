@@ -434,6 +434,7 @@ section {
         margin-bottom: space(1);
     }
     button {
+        border: none;
         font-size: $fz-btn;
         font-weight: $fw-bold;
     }
@@ -486,20 +487,16 @@ section {
     .btn-orange {
         color: $white;
         background: $orange;
-        border: 2px outset darken($orange, 15%);
     }
     .btn-orange:hover {
-        border: 2px outset darken($white, 15%);
         background: $white;
         color: $orange;
     }
     .btn-gold {
         color: $white;
         background: $gold;
-        border: 2px outset darken($gold, 15%);
     }
     .btn-gold:hover {
-        border: 2px outset darken($white, 15%);
         background: $white;
         color: $black;
     }
@@ -534,6 +531,24 @@ section {
 .blog__card {
     background: $bg-2;
     margin-bottom: space(2);
+    .img a {
+        display: block;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background: #131619;
+            transition: all 0.3s;
+        }
+    }
+    &:hover .img a::before {
+        opacity: 0.6;
+    }
 }
 
 .blog__content {
@@ -575,7 +590,7 @@ section {
 
 .address__title {
     h4 {
-        font-size: $fz-title-address;
+        font-size: 21px;
         font-weight: $fw-bold-2;
         padding-bottom: space(0.5);
         margin-bottom: space(1.5);
@@ -611,6 +626,9 @@ section {
 .address__time {
     span {
         float: right;
+    }
+    ul {
+        padding-right: 20%;
     }
 }
 
