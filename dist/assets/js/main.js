@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let filterImage = document.querySelectorAll('.project__filter button');
         let gridImg = document.querySelector('.grid-img');
         let itemImgs = gridImg.querySelectorAll('.item-img');
-        let oldImgs = itemImgs;
+        let objOldImgs = { changedData: itemImgs };
         let oldData = "";
         let noHasEnd = null;
         let sameEnd = null;
@@ -251,9 +251,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 clearTimeout(sameEnd);
 
                 let imgs = Array.from(itemImgs).filter(e => e.className.includes(data));
-                let sameImgs = Array.from(oldImgs).filter(e => e.className.includes(data));
+                let sameImgs = Array.from(objOldImgs.changedData).filter(e => e.className.includes(data));
                 let newImgs = Array.from(imgs).filter(e => !e.className.includes(oldData));
-                let noHas = Array.from(oldImgs).filter(e => !e.className.includes(data));
+                let noHas = Array.from(objOldImgs.changedData).filter(e => !e.className.includes(data));
 
                 noHas.forEach(e => {
 
@@ -297,26 +297,26 @@ document.addEventListener("DOMContentLoaded", function() {
                     });
                 }, 400);
 
-                oldImgs = imgs;
+                objOldImgs.changedData = imgs;
                 oldData = data;
 
             });
         });
 
-        let imgsOnRow = gridImg.offsetWidth / oldImgs[0].offsetWidth;
-        let imgHeight = oldImgs[0].offsetHeight;
+        let imgsOnRow = gridImg.offsetWidth / objOldImgs.changedData[0].offsetWidth;
+        let imgHeight = objOldImgs.changedData[0].offsetHeight;
         window.addEventListener('resize', () => {
-            let itemsOnRow = gridImg.offsetWidth / oldImgs[0].offsetWidth;
-            let itemHeight = oldImgs[0].offsetHeight;
+            let itemsOnRow = gridImg.offsetWidth / objOldImgs.changedData[0].offsetWidth;
+            let itemHeight = objOldImgs.changedData[0].offsetHeight;
             if (itemsOnRow != imgsOnRow || itemHeight != imgHeight) {
-                oldImgs.forEach(e => {
+                objOldImgs.changedData.forEach(e => {
                     Object.assign(e.style, { transition: "left 0.4s, top 0.4s" });
                 });
 
-                filter(gridImg, oldImgs);
+                filter(gridImg, objOldImgs.changedData);
 
                 setTimeout(() => {
-                    oldImgs.forEach(e => {
+                    objOldImgs.changedData.forEach(e => {
                         Object.assign(e.style, { transition: null });
                     });
                 }, 400);
@@ -338,9 +338,15 @@ document.addEventListener("DOMContentLoaded", function() {
             });
             grid.style.height = (Math.ceil(items.length / itemsOnRow) * itemHeight) + "px";
         }
+        zoomImg(itemImgs, objOldImgs, "index-1");
+    }
 
+    //
+    //overlay img (zoom img)
+    //
 
-        let overlayProjectimg = document.querySelector('.overlay-project-img');
+    function zoomImg(element, data, index) {
+        let overlayProjectimg = document.querySelector(`.overlay-project-img.${index}`);
         let overlayImg = overlayProjectimg.querySelector('.overlay-img');
         let overlayClose = overlayProjectimg.querySelector('.overlay-close');
         let overlayCounter = overlayProjectimg.querySelector('.overlay-counter');
@@ -348,15 +354,15 @@ document.addEventListener("DOMContentLoaded", function() {
         let previousBtn = overlayProjectimg.querySelector('.previous-btn');
         let nextBtn = overlayProjectimg.querySelector('.next-btn');
         let indexImg;
-        itemImgs.forEach(e => e.addEventListener('click', () => {
+        element.forEach(e => e.addEventListener('click', () => {
             document.body.style.overflow = "hidden";
             overlayProjectimg.classList.add('actived');
             overlayImg.src = e.querySelector('img').src;
 
-            for (indexImg = 0; indexImg < oldImgs.length; indexImg++) {
-                if (e == oldImgs[indexImg]) break;
+            for (indexImg = 0; indexImg < data.changedData.length; indexImg++) {
+                if (e == data.changedData[indexImg]) break;
             }
-            overlayCounter.innerText = `${indexImg+1} of ${oldImgs.length}`;
+            overlayCounter.innerText = `${indexImg+1} of ${data.changedData.length}`;
         }));
 
         overlayImg.addEventListener('click', nextImg);
@@ -373,17 +379,18 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         function nextImg() {
-            if (indexImg == oldImgs.length - 1) indexImg = -1;
-            overlayImg.src = oldImgs[++indexImg].querySelector('img').src;
-            overlayCounter.innerText = `${indexImg+1} of ${oldImgs.length}`;
+            if (indexImg == data.changedData.length - 1) indexImg = -1;
+            overlayImg.src = data.changedData[++indexImg].querySelector('img').src;
+            overlayCounter.innerText = `${indexImg+1} of ${data.changedData.length}`;
         }
 
         function previousImg() {
-            if (indexImg == 0) indexImg = oldImgs.length;
-            overlayImg.src = oldImgs[--indexImg].querySelector('img').src;
-            overlayCounter.innerText = `${indexImg+1} of ${oldImgs.length}`;
+            if (indexImg == 0) indexImg = data.changedData.length;
+            overlayImg.src = data.changedData[--indexImg].querySelector('img').src;
+            overlayCounter.innerText = `${indexImg+1} of ${data.changedData.length}`;
         }
     }
+
 
     //
     //fanfact
@@ -421,6 +428,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     }
 
+
+    //
+    //address customer
+    //
+    let addressCustomer = document.querySelectorAll('.address__customers ul li');
+    let dataCustomer = { changedData: addressCustomer };
+    zoomImg(addressCustomer, dataCustomer, "index-2");
 
     //
     //Scroll top
