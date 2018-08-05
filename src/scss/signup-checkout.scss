@@ -100,7 +100,8 @@
 }
 
 .checkout-form ul li strong {
-    float: right;
+    display: block;
+    text-align: right;
     font-family: raleway;
     font-size: 16px;
     color: #fb9902;
@@ -108,8 +109,8 @@
 
 .checkout-form ul li span {
     position: absolute;
-    left: 50%;
-    top: 0;
+    left: 0%;
+    bottom: 20px;
     font-size: 16px;
     color: #fb9902;
 }

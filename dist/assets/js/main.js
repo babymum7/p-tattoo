@@ -424,8 +424,20 @@ document.addEventListener("DOMContentLoaded", function() {
     //
     //shopping cart
     //
-    if (document.querySelector('.shopping-cart')) {
-
+    if (document.querySelector('.shop-details-area')) {
+        let Imgview = document.querySelectorAll('.img-view');
+        let detailsImg = document.querySelector('.details-img img');
+        Imgview.forEach(e => e.addEventListener('click', () => {
+            if (!e.className.includes('actived')) {
+                Imgview.forEach(e => {
+                    e.classList.remove('actived');
+                    e.style.pointerEvents = null;
+                });
+                e.classList.add('actived');
+                detailsImg.src = e.querySelector('img').src;
+                e.style.pointerEvents = "none";
+            }
+        }));
     }
 
 
