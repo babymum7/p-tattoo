@@ -1,4 +1,14 @@
 // 576px
+.pack-2 {
+    padding: 0 0 50px;
+}
+
+@media (min-height: 569px) {
+    .header-home .content {
+        display: grid;
+    }
+}
+
 @media (min-width: media(sm)) {
     .pack__content {
         .title {
@@ -26,7 +36,6 @@
     }
     .scroll-top {
         right: 1%;
-        bottom: 1%;
         .flaticon-heart::before {
             font-size: 30px;
         }
@@ -41,11 +50,20 @@
     h2 {
         font-size: $fz-title-section-md;
     }
+    .book-panel {
+        padding: 15px;
+        h3 {
+            font-size: 18px;
+        }
+    }
     .service-page-wrap h3 {
         font-size: 25px;
     }
     .work-wrap h3 {
         font-size: 20px;
+    }
+    .service {
+        flex: 0 0 12.5%;
     }
     .nav-icon {
         .item {
@@ -74,6 +92,9 @@
     .work-area,
     .shop-details-area {
         padding: 70px 0;
+    }
+    .pack-2 {
+        padding: 0 0 70px;
     }
     .pack__content {
         .title {
@@ -130,9 +151,18 @@
     .contact-area,
     .service-page-area,
     .wedo-area,
-    .quote-wrap,
-    .work-area {
+    .work-area,
+    .shop-details-area {
         padding: 100px 0;
+    }
+    .pack-2 {
+        padding: 0 0 100px;
+    }
+    .service-name {
+        font-size: 16px;
+    }
+    .service-price {
+        font-size: 20px;
     }
     .menu-bar {
         ul li a {
@@ -144,7 +174,7 @@
             margin-left: space(1);
         }
     }
-    .content {
+    .header-home .content {
         h1 {
             font-size: $fz-title-header-lg;
         }
@@ -186,7 +216,6 @@
     }
     .scroll-top {
         right: 2%;
-        bottom: 2%;
         .flaticon-heart::before {
             font-size: 35px;
         }
@@ -195,7 +224,7 @@
 
 // 1200px
 @media (min-width: media(xl)) {
-    .content {
+    .header-home .content {
         h1 {
             font-size: $fz-title-header-xl;
         }

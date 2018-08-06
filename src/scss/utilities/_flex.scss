@@ -8,6 +8,9 @@
         .justify-content#{$infix}-center {
             justify-content: center !important;
         }
+        .justify-content#{$infix}-between {
+            justify-content: space-between !important;
+        }
         .align-items#{$infix}-center {
             align-items: center !important;
         }

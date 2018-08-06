@@ -9,7 +9,6 @@ section {
 
 .about-us,
 .project,
-.pack,
 .blog,
 .mission,
 .signup,
@@ -24,11 +23,65 @@ section {
     background: $bg-1;
 }
 
+.services {
+    padding: 25px 0;
+    text-align: center;
+}
+
+.services-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    // justify-content: space-between;
+}
+
+.service {
+    margin-bottom: space(1);
+    flex: 0 0 25%;
+}
+
+.service-name {
+    margin-bottom: space(0.5);
+    font-size: 12px;
+}
+
+.service-price {
+    font-size: 15px;
+    margin: 0;
+    color: $red;
+}
+
+.service-icon {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: space(0.5);
+    i {
+        width: 60px;
+        height: 60px;
+        color: $orange;
+        border: 1px solid $orange;
+        border-radius: 50%;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        &::before {
+            font-size: 30px;
+        }
+    }
+}
+
+.my-team {
+    background: $gray-900;
+}
+
 .we-do,
-.my-team,
 .address,
 .brand-area,
-.wedo-area {
+.wedo-area,
+.pack,
+.services {
     background: $bg-2;
 }
 
@@ -62,8 +115,9 @@ section {
         margin: 0;
     }
     .icon {
-        padding: space(1.5) space(2);
+        padding: space(2) space(2);
         background: $bg-we-do-icon;
+        height: 100%;
         span::before {
             font-size: $fz-we-do-icon;
             color: $orange;
@@ -429,7 +483,7 @@ section {
     overflow: hidden;
     border-radius: space(1);
     padding: space(2) 0;
-    background: $bg-2;
+    background: $bg-1;
     color: $white;
     text-align: center;
     ul li {
@@ -678,7 +732,7 @@ section {
     position: fixed;
     z-index: 70;
     right: 0;
-    bottom: 0;
+    bottom: 6%;
     color: $white;
     cursor: pointer;
     transition: color $transition-hover;

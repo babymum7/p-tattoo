@@ -103,6 +103,22 @@ document.addEventListener("DOMContentLoaded", function() {
     //sliders end
 
     //
+    //book-panel
+    //
+    if (document.querySelector('.book-panel')) {
+        let bookPanel = document.querySelector('.book-panel');
+        let overlayBookNow = document.querySelector('.overlay-book-now');
+        let bookNowClose = document.querySelector('.book-now-close');
+        bookPanel.addEventListener('click', () => {
+            overlayBookNow.classList.toggle('actived');
+        });
+        bookNowClose.addEventListener('click', () => {
+            overlayBookNow.classList.remove('actived');
+        });
+    }
+
+
+    //
     //Menu button
     //
     let menuBtn = document.querySelector('.nav-menu-icon');
