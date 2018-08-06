@@ -6,6 +6,12 @@
 @media (min-height: 569px) {
     .header-home .content {
         display: grid;
+        p {
+            margin-bottom: space(1);
+        }
+        h1 {
+            margin-bottom: space(1);
+        }
     }
 }
 
